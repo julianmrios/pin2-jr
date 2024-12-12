@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-0c55b159cbfafe1f0" # Cambia esto por el ID de AMI que necesites
+  ami           = "ami-0c80e2b6ccb9ad6d1" # Cambia esto por el ID de AMI que necesites
   instance_type = "t2.micro"
 
   user_data = <<-EOF
