@@ -89,5 +89,5 @@ resource "aws_security_group" "sg" {
 }
 
 output "Webserver-Public-IP" {
-  value = aws_instance.webserver.public_ip
+  value = aws_instance.ApacheServer.public_ip
 }
