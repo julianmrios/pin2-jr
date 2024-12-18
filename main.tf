@@ -2,7 +2,7 @@
 ## region = "us-east-2"
 ##  }
 
-resource "aws_instance" "web" {
+resource "aws_instance" "ApacheServer" {
   ami           = "ami-036841078a4b68e14"
   instance_type = "t2.micro"
 
