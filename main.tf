@@ -1,6 +1,6 @@
-provider "aws" {
-  region = "us-east-2"
-}
+##provider "aws" {
+## region = "us-east-2"
+##  }
 
 resource "aws_instance" "web" {
   ami           = "ami-036841078a4b68e14"
