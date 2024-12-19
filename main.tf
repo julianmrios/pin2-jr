@@ -1,5 +1,5 @@
-resource "aws_key_pair" "my_key" 
-  { key_name = "julianmrios" 
+resource "aws_key_pair" "my_key" {
+  key_name = "julianmrios" 
   public_key = file("julianmrios.pem") 
   }
 
