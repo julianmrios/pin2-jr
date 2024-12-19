@@ -2,7 +2,7 @@
 resource "aws_instance" "apachewebserver" {
   ami                         = data.aws_ami.ubuntu.id
   instance_type               = "t2.micro"
-  key_name                    = "temp"
+  key_name                    = "julianmrios"
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.sg.id]
   subnet_id                   = aws_subnet.subnet.id
