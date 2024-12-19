@@ -1,8 +1,22 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "sa-east-1"
 }
 
+data "aws_ami" "ubuntu" {
+  most_recent = true
 
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+
+  owners = ["099720109477"] # Canonical
+}
 
 #Get Linux AMI ID using SSM Parameter endpoint in us-east-1
 #data "aws_ssm_parameter" "webserver-ami" {
@@ -89,5 +103,5 @@ resource "aws_security_group" "sg" {
 }
 
 output "Webserver-Public-IP" {
-  value = aws_instance.ApacheServer.public_ip
+  value = aws_instance.apachewebserver.public_ip
 }
